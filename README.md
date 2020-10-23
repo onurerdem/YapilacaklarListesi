@@ -1,1 +1,1 @@
-# YapilacaklarListesi
+# Yapılacaklar Listesi.
