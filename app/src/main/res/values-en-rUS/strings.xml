@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">To Do List</string>
+    <string name="tasks">Tasks</string>
+    <string name="sample_task">This is an sample task inside the application.</string>
+    <string name="new_task">New Task</string>
+    <string name="save">Save</string>
+</resources>

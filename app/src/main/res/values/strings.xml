@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Yapilacaklar Listesi</string>
+    <string name="tasks">Görevler</string>
+    <string name="sample_task">Bu, uygulama içindeki örnek bir görevdir.</string>
+    <string name="new_task">Yeni Görev</string>
+    <string name="save">Kaydet</string>
+</resources>
