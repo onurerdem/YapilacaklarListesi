@@ -5,4 +5,14 @@
     <string name="sample_task">This is an sample task inside the application.</string>
     <string name="new_task">New Task</string>
     <string name="save">Save</string>
+    <string name="todo">TO DO</string>
+    <string name="test_task">This is a test task.</string>
+    <string name="delete_task">Delete task.</string>
+    <string name="delete_task_ask">Are you sure you want to detele this task?</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="languages">Languages</string>
+    <string name="turkish">Turkish</string>
+    <string name="english">English</string>
+    <string name="languages1">LANGUAGES</string>
 </resources>

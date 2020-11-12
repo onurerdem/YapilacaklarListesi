@@ -4,4 +4,14 @@
     <string name="sample_task">Bu, uygulama içindeki örnek bir görevdir.</string>
     <string name="new_task">Yeni Görev</string>
     <string name="save">Kaydet</string>
+    <string name="cancel">İptal</string>
+    <string name="todo">YAPILACAKLAR</string>
+    <string name="test_task">Bu bir deneme görevidir.</string>
+    <string name="delete_task">Görevi sil.</string>
+    <string name="delete_task_ask">Bu görevi silmek istediğinizden emin misiniz?</string>
+    <string name="confirm">Onayla</string>
+    <string name="languages">Diller</string>
+    <string name="turkish">Türkçe</string>
+    <string name="english">İngilizce</string>
+    <string name="languages1">DİLLER</string>
 </resources>
