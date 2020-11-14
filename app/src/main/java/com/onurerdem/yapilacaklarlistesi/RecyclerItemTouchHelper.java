@@ -40,16 +40,17 @@ public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
                     adapter.deleteItem(position);
                 }
             });
-            builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+            builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     adapter.notifyItemChanged(viewHolder.getAdapterPosition());
                 }
             });
+            adapter.notifyItemChanged(viewHolder.getAdapterPosition());
             AlertDialog dialog = builder.create();
             dialog.show();
             dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.RED);
-            //dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(adapter.getContext(), R.color.colorPrimaryDark));
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(adapter.getContext(), R.color.colorPrimaryDark));
         }else{
             adapter.editItem(position);
         }
