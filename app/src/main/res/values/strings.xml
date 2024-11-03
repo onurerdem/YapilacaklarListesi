@@ -14,4 +14,7 @@
     <string name="turkish">Türkçe</string>
     <string name="english">İngilizce</string>
     <string name="languages1">DİLLER</string>
+    <string name="are_you_sure_you_want_to_get_out">Çıkmak istediğinize emin misiniz?</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
 </resources>

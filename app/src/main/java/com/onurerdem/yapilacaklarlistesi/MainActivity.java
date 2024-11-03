@@ -5,10 +5,10 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -193,6 +193,51 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
                 //dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(adapter.getContext(), R.color.colorPrimaryDark));*/
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        /*AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("ÇIKIŞ");
+        builder.setMessage("Çıkmak istediğinize emin misiniz?");
+        builder.setNegativeButton("HAYIR", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int id) {
+            }
+        });
+        builder.setPositiveButton("EVET", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                Intent cikis = new Intent(Intent.ACTION_MAIN);
+                cikis.addCategory(Intent.CATEGORY_HOME);
+                cikis.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(cikis);
+            }
+        });
+        builder.show();*/
+        final Dialog dialog = new Dialog(MainActivity.this);
+        dialog.setContentView(R.layout.warning);
+        Button yesButton = (Button) dialog.findViewById(R.id.yesButton);
+        Button noButton = (Button) dialog.findViewById(R.id.noButton);
+        TextView textWarning = (TextView) dialog.findViewById(R.id.textWarning);
+        textWarning.setText(R.string.are_you_sure_you_want_to_get_out);
+        yesButton.setText(R.string.yes);
+        noButton.setText(R.string.no);
+        yesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exit = new Intent(Intent.ACTION_MAIN);
+                exit.addCategory(Intent.CATEGORY_HOME);
+                exit.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(exit);
+                dialog.dismiss();
+            }
+        });
+        noButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     @Override
